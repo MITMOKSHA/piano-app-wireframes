@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #f0f0f0; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #F8F9FA;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 20pt;
+}
+.phone {
+  width: 110pt;
+  height: 200pt;
+  background: #FFFFFF;
+  border-radius: 12pt;
+  border: 2pt solid #333333;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.phone-header {
+  background: #2C5F8A;
+  padding: 8pt 10pt;
+}
+.phone-body {
+  flex: 1;
+  padding: 6pt 8pt;
+  background: #F8F9FA;
+  overflow: hidden;
+}
+.page-title {
+  font-size: 11pt;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0;
+}
+.page-sub {
+  font-size: 7pt;
+  color: #AACCEE;
+  margin: 0;
+}
+.info-card {
+  background: #FFFFFF;
+  border-radius: 4pt;
+  padding: 6pt;
+  margin-bottom: 5pt;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3pt;
+}
+.info-label {
+  font-size: 6pt;
+  color: #888;
+  margin: 0;
+}
+.info-value {
+  font-size: 7pt;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+.remaining-big {
+  text-align: center;
+  background: #EBF5FF;
+  border-radius: 4pt;
+  padding: 6pt;
+  margin-bottom: 5pt;
+}
+.big-num {
+  font-size: 20pt;
+  font-weight: bold;
+  color: #2C5F8A;
+  margin: 0;
+}
+.big-label {
+  font-size: 6pt;
+  color: #666;
+  margin: 0;
+}
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3pt 0;
+  border-bottom: 1pt solid #F0F0F0;
+}
+.history-date {
+  font-size: 6pt;
+  color: #888;
+  margin: 0;
+}
+.history-name {
+  font-size: 6pt;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+.deduct {
+  font-size: 6pt;
+  color: #FF4D4F;
+  margin: 0;
+}
+.section-title {
+  font-size: 7pt;
+  font-weight: bold;
+  color: #555;
+  margin: 0 0 3pt 0;
+}
+.right-panel {
+  flex: 1;
+  padding: 24pt 30pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-title {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #2C5F8A;
+  margin-bottom: 4pt;
+}
+.slide-sub {
+  font-size: 9pt;
+  color: #666666;
+  margin-bottom: 16pt;
+}
+.title-bar {
+  background: #2C5F8A;
+  color: #FFFFFF;
+  padding: 6pt 10pt;
+  border-radius: 4pt 4pt 0 0;
+}
+.card {
+  background: #FFFFFF;
+  border: 1pt solid #E0E0E0;
+  border-radius: 0 0 4pt 4pt;
+  padding: 10pt;
+  margin-bottom: 8pt;
+}
+.two-col {
+  display: flex;
+  gap: 12pt;
+}
+.col {
+  flex: 1;
+}
+.col-title {
+  font-size: 9pt;
+  font-weight: bold;
+  color: #2C5F8A;
+  margin-bottom: 5pt;
+}
+.col-item {
+  font-size: 8pt;
+  color: #444;
+  margin-bottom: 3pt;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="phone-header">
+        <p class="page-title">小红</p>
+        <p class="page-sub">学员详情</p>
+      </div>
+      <div class="phone-body">
+        <div class="info-card">
+          <div class="info-row">
+            <p class="info-label">手机号</p>
+            <p class="info-value">138****5678</p>
+          </div>
+          <div class="info-row">
+            <p class="info-label">课程</p>
+            <p class="info-value">考级班</p>
+          </div>
+        </div>
+        <div class="remaining-big">
+          <p class="big-num">3</p>
+          <p class="big-label">剩余课时</p>
+        </div>
+        <p class="section-title">上课历史</p>
+        <div class="history-item">
+          <div>
+            <p class="history-name">考级班</p>
+            <p class="history-date">2024-04-10 15:00</p>
+          </div>
+          <p class="deduct">-1</p>
+        </div>
+        <div class="history-item">
+          <div>
+            <p class="history-name">考级班</p>
+            <p class="history-date">2024-04-03 15:00</p>
+          </div>
+          <p class="deduct">-1</p>
+        </div>
+        <div class="history-item">
+          <div>
+            <p class="history-name">考级班</p>
+            <p class="history-date">2024-03-27 15:00</p>
+          </div>
+          <p class="deduct">-1</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:8pt; text-align:center;">
+      <p style="font-size:8pt; color:#555; margin:0;">老师端 · 学员详情</p>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <p class="slide-title">学员详情页面</p>
+    <p class="slide-sub">老师管理学员课时包、查看上课历史</p>
+
+    <div class="title-bar">
+      <p style="color:#fff; font-size:9pt; margin:0; font-weight:bold;">页面模块</p>
+    </div>
+    <div class="card">
+      <div class="two-col">
+        <div class="col">
+          <p class="col-title">老师端 · 学员详情</p>
+          <p class="col-item">· 基本信息（姓名/手机号）</p>
+          <p class="col-item">· 剩余课时（大号数字突出展示）</p>
+          <p class="col-item">· 课时包列表（新增/编辑）</p>
+          <p class="col-item">· 上课历史记录（class_records）</p>
+        </div>
+        <div class="col">
+          <p class="col-title">学员端 · 课时页面</p>
+          <p class="col-item">· 剩余课时展示</p>
+          <p class="col-item">· 课时包详情（总量/剩余/到期日）</p>
+          <p class="col-item">· 扣课时历史记录</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-bar" style="margin-top:4pt;">
+      <p style="color:#fff; font-size:9pt; margin:0; font-weight:bold;">课时不足提醒触发逻辑</p>
+    </div>
+    <div class="card">
+      <p style="font-size:8pt; color:#333; margin:0;">签到完成 → 扣课时 → 剩余 ≤ 阈值（默认3节）→ 微信订阅消息推送给学员</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

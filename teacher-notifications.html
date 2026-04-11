@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="UTF-8"><title>老师端 - 通知</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div>
+<div class="phone">
+  <div class="header">
+    <h1>通知</h1>
+    <div class="icon-btn">＋</div>
+  </div>
+  <div class="body">
+    <div class="notif-item">
+      <div class="unread-dot"></div>
+      <div class="notif-title">五一放假通知</div>
+      <div class="notif-meta">发送给：全体学员 · 2024-04-10 10:00</div>
+    </div>
+    <div class="notif-item">
+      <div class="notif-title">4月课表调整</div>
+      <div class="notif-meta">发送给：王老师的学员 · 2024-04-05 14:30</div>
+    </div>
+    <div class="notif-item">
+      <div class="notif-title">考级注意事项</div>
+      <div class="notif-meta">发送给：全体学员 · 2024-03-28 09:00</div>
+    </div>
+    <div class="notif-item">
+      <div class="notif-title">3月课表</div>
+      <div class="notif-meta">发送给：全体学员 · 2024-03-01 10:00</div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <div class="tab"><div class="icon"></div><div class="lbl">首页</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">课表</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">学员</div></div>
+    <div class="tab"><div class="icon active"></div><div class="lbl active">通知</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">我的</div></div>
+  </div>
+</div>
+<div class="phone-label">老师端 · 通知列表</div>
+</div>
+
+<div>
+<div class="phone">
+  <div class="header">
+    <div style="font-size:14px;color:#fff;cursor:pointer;">← 返回</div>
+    <h1>发送通知</h1>
+    <div style="width:40px;"></div>
+  </div>
+  <div class="body">
+    <div class="card">
+      <div class="form-item">
+        <div class="form-label">通知标题 *</div>
+        <input class="form-input" placeholder="请输入通知标题" />
+      </div>
+      <div class="form-item">
+        <div class="form-label">通知内容 *</div>
+        <textarea class="form-input" rows="5" placeholder="请输入通知内容..." style="resize:none;line-height:1.5;"></textarea>
+      </div>
+      <div class="form-item">
+        <div class="form-label">发送范围 *</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px;border:2px solid #2C5F8A;border-radius:8px;cursor:pointer;">
+            <div style="width:16px;height:16px;border-radius:50%;background:#2C5F8A;"></div>
+            <div>
+              <div style="font-size:13px;font-weight:bold;color:#222;">全体学员</div>
+              <div style="font-size:11px;color:#888;">机构内所有学员</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;padding:10px;border:1px solid #E8E8E8;border-radius:8px;cursor:pointer;">
+            <div style="width:16px;height:16px;border-radius:50%;border:2px solid #CCC;"></div>
+            <div>
+              <div style="font-size:13px;color:#222;">我的学员</div>
+              <div style="font-size:11px;color:#888;">仅发给我负责的学员</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-primary">发送通知</button>
+  </div>
+</div>
+<div class="phone-label">老师端 · 发送通知</div>
+</div>
+</body>
+</html>

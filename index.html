@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>钢琴机构管理App - 页面线框图</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #F0F2F5; padding: 32px; }
+h1 { font-size: 24px; font-weight: bold; color: #222; margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: #888; margin-bottom: 32px; }
+.section { margin-bottom: 32px; }
+.section-title { font-size: 16px; font-weight: bold; color: #2C5F8A; margin-bottom: 12px; padding-left: 10px; border-left: 4px solid #2C5F8A; }
+.grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.page-card { background: #fff; border-radius: 12px; padding: 16px 20px; cursor: pointer; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: box-shadow 0.2s; display: flex; align-items: center; gap: 12px; min-width: 200px; }
+.page-card:hover { box-shadow: 0 4px 16px rgba(44,95,138,0.15); }
+.page-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.icon-teacher { background: #E6F4FF; }
+.icon-student { background: #F6FFED; }
+.icon-auth { background: #FFF7E6; }
+.page-name { font-size: 14px; font-weight: bold; color: #222; }
+.page-desc { font-size: 11px; color: #888; margin-top: 2px; }
+.tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 8px; margin-top: 4px; }
+.tag-teacher { background: #E6F4FF; color: #1677FF; }
+.tag-student { background: #F6FFED; color: #52C41A; }
+.tag-auth { background: #FFF7E6; color: #FA8C16; }
+</style>
+</head>
+<body>
+<h1>🎹 钢琴机构管理 App</h1>
+<div class="subtitle">页面线框图总览 · 点击查看各页面</div>
+
+<div class="section">
+  <div class="section-title">公共页面</div>
+  <div class="grid">
+    <a href="auth.html" class="page-card">
+      <div class="page-icon icon-auth">🔐</div>
+      <div>
+        <div class="page-name">登录 / 注册 / 创建机构</div>
+        <div class="page-desc">用户入口，手机号+密码</div>
+        <div class="tag tag-auth">3个页面</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">老师端（TabBar: 首页 · 课表 · 学员 · 通知 · 我的）</div>
+  <div class="grid">
+    <a href="teacher-home.html" class="page-card">
+      <div class="page-icon icon-teacher">🏠</div>
+      <div>
+        <div class="page-name">首页 Dashboard</div>
+        <div class="page-desc">今日课程、学员总数、课时不足</div>
+        <div class="tag tag-teacher">TabBar</div>
+      </div>
+    </a>
+    <a href="teacher-schedule.html" class="page-card">
+      <div class="page-icon icon-teacher">📅</div>
+      <div>
+        <div class="page-name">课表</div>
+        <div class="page-desc">日历视图，按天查看课程</div>
+        <div class="tag tag-teacher">TabBar</div>
+      </div>
+    </a>
+    <a href="teacher-create-lesson.html" class="page-card">
+      <div class="page-icon icon-teacher">➕</div>
+      <div>
+        <div class="page-name">新增课程</div>
+        <div class="page-desc">单次课 / 周期课两种模式</div>
+        <div class="tag tag-teacher">2个页面</div>
+      </div>
+    </a>
+    <a href="teacher-lesson-detail.html" class="page-card">
+      <div class="page-icon icon-teacher">✅</div>
+      <div>
+        <div class="page-name">课程详情</div>
+        <div class="page-desc">签到 / 缺席 / 取消操作</div>
+        <div class="tag tag-teacher">2个状态</div>
+      </div>
+    </a>
+    <a href="teacher-students.html" class="page-card">
+      <div class="page-icon icon-teacher">👥</div>
+      <div>
+        <div class="page-name">学员列表 + 录入</div>
+        <div class="page-desc">搜索、课时不足标记、录入学员</div>
+        <div class="tag tag-teacher">TabBar</div>
+      </div>
+    </a>
+    <a href="teacher-student-detail.html" class="page-card">
+      <div class="page-icon icon-teacher">👤</div>
+      <div>
+        <div class="page-name">学员详情 + 课时包</div>
+        <div class="page-desc">课时余量、上课历史、新增课时包</div>
+        <div class="tag tag-teacher">2个页面</div>
+      </div>
+    </a>
+    <a href="teacher-notifications.html" class="page-card">
+      <div class="page-icon icon-teacher">📢</div>
+      <div>
+        <div class="page-name">通知列表 + 发送</div>
+        <div class="page-desc">机构公告，按范围发送</div>
+        <div class="tag tag-teacher">TabBar</div>
+      </div>
+    </a>
+    <a href="teacher-profile.html" class="page-card">
+      <div class="page-icon icon-teacher">⚙️</div>
+      <div>
+        <div class="page-name">我的</div>
+        <div class="page-desc">机构信息、课程模板、导出CSV</div>
+        <div class="tag tag-teacher">TabBar</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">学员端（TabBar: 课表 · 课时 · 通知 · 我的）</div>
+  <div class="grid">
+    <a href="student-all.html" class="page-card">
+      <div class="page-icon icon-student">📋</div>
+      <div>
+        <div class="page-name">课表</div>
+        <div class="page-desc">剩余课时、即将上课、历史记录</div>
+        <div class="tag tag-student">TabBar</div>
+      </div>
+    </a>
+    <a href="student-all.html#lesson" class="page-card">
+      <div class="page-icon icon-student">🎯</div>
+      <div>
+        <div class="page-name">课时</div>
+        <div class="page-desc">课时包详情、扣课时流水</div>
+        <div class="tag tag-student">TabBar</div>
+      </div>
+    </a>
+    <a href="student-all.html#notif" class="page-card">
+      <div class="page-icon icon-student">🔔</div>
+      <div>
+        <div class="page-name">通知</div>
+        <div class="page-desc">机构公告、系统提醒、未读标记</div>
+        <div class="tag tag-student">TabBar</div>
+      </div>
+    </a>
+    <a href="student-all.html#profile" class="page-card">
+      <div class="page-icon icon-student">👤</div>
+      <div>
+        <div class="page-name">我的</div>
+        <div class="page-desc">个人信息、修改密码</div>
+        <div class="tag tag-student">TabBar</div>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

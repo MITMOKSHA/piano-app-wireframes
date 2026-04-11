@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #f0f0f0; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background: #F8F9FA;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+.phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 20pt;
+}
+.phone {
+  width: 110pt;
+  height: 200pt;
+  background: #FFFFFF;
+  border-radius: 12pt;
+  border: 2pt solid #333333;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.phone-header {
+  background: #2C5F8A;
+  padding: 8pt 10pt;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-body {
+  flex: 1;
+  padding: 6pt 8pt;
+  background: #F8F9FA;
+  overflow: hidden;
+}
+.phone-footer {
+  background: #FFFFFF;
+  border-top: 1pt solid #E0E0E0;
+  display: flex;
+  justify-content: space-around;
+  padding: 5pt 0;
+}
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.tab-dot {
+  width: 18pt;
+  height: 18pt;
+  border-radius: 3pt;
+  background: #E0E0E0;
+  margin-bottom: 2pt;
+}
+.tab-dot.active {
+  background: #2C5F8A;
+}
+.tab-label {
+  width: 16pt;
+  height: 4pt;
+  background: #CCCCCC;
+  border-radius: 2pt;
+}
+.tab-label.active {
+  background: #2C5F8A;
+}
+.page-title {
+  font-size: 11pt;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0;
+}
+.add-btn {
+  width: 14pt;
+  height: 14pt;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-row {
+  display: flex;
+  gap: 3pt;
+  margin-bottom: 6pt;
+}
+.cal-day {
+  flex: 1;
+  text-align: center;
+  padding: 3pt 0;
+  border-radius: 3pt;
+  background: #FFFFFF;
+  border: 1pt solid #E0E0E0;
+}
+.cal-day.active {
+  background: #2C5F8A;
+}
+.cal-day p {
+  margin: 0;
+  font-size: 6pt;
+}
+.cal-day p.num {
+  font-size: 8pt;
+  font-weight: bold;
+  color: #333;
+}
+.cal-day.active p.num {
+  color: #FFFFFF;
+}
+.cal-day p.label {
+  color: #999;
+}
+.cal-day.active p.label {
+  color: #AACCEE;
+}
+.lesson-block {
+  background: #FFFFFF;
+  border-left: 3pt solid #2C5F8A;
+  padding: 4pt 6pt;
+  border-radius: 0 3pt 3pt 0;
+  margin-bottom: 4pt;
+}
+.lesson-block.done {
+  border-left-color: #52C41A;
+  opacity: 0.7;
+}
+.lesson-name {
+  font-size: 7pt;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+.lesson-time {
+  font-size: 6pt;
+  color: #888;
+  margin: 0;
+}
+.label {
+  margin-top: 8pt;
+  text-align: center;
+}
+.right-panel {
+  flex: 1;
+  padding: 24pt 30pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-title {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #2C5F8A;
+  margin-bottom: 4pt;
+}
+.slide-sub {
+  font-size: 9pt;
+  color: #666666;
+  margin-bottom: 16pt;
+}
+.title-bar {
+  background: #2C5F8A;
+  color: #FFFFFF;
+  padding: 6pt 10pt;
+  border-radius: 4pt 4pt 0 0;
+}
+.card {
+  background: #FFFFFF;
+  border: 1pt solid #E0E0E0;
+  border-radius: 0 0 4pt 4pt;
+  padding: 10pt;
+  margin-bottom: 8pt;
+}
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6pt;
+}
+.step-num {
+  width: 14pt;
+  height: 14pt;
+  background: #2C5F8A;
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 7pt;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 8pt;
+  margin-top: 1pt;
+}
+.step-text {
+  font-size: 8pt;
+  color: #333;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="phone-header">
+        <p class="page-title">课表</p>
+        <div class="add-btn">
+          <p style="font-size:10pt; color:#2C5F8A; margin:0; font-weight:bold;">+</p>
+        </div>
+      </div>
+      <div class="phone-body">
+        <div class="calendar-row">
+          <div class="cal-day">
+            <p class="label">一</p>
+            <p class="num">7</p>
+          </div>
+          <div class="cal-day">
+            <p class="label">二</p>
+            <p class="num">8</p>
+          </div>
+          <div class="cal-day">
+            <p class="label">三</p>
+            <p class="num">9</p>
+          </div>
+          <div class="cal-day active">
+            <p class="label">四</p>
+            <p class="num">10</p>
+          </div>
+          <div class="cal-day">
+            <p class="label">五</p>
+            <p class="num">11</p>
+          </div>
+          <div class="cal-day">
+            <p class="label">六</p>
+            <p class="num">12</p>
+          </div>
+          <div class="cal-day">
+            <p class="label">日</p>
+            <p class="num">13</p>
+          </div>
+        </div>
+        <div class="lesson-block done">
+          <p class="lesson-name">小明 · 钢琴基础</p>
+          <p class="lesson-time">14:00 已完成</p>
+        </div>
+        <div class="lesson-block">
+          <p class="lesson-name">小红 · 考级班</p>
+          <p class="lesson-time">15:00 待上课</p>
+        </div>
+        <div class="lesson-block">
+          <p class="lesson-name">小李 · 钢琴基础</p>
+          <p class="lesson-time">18:00 待上课</p>
+        </div>
+      </div>
+      <div class="phone-footer">
+        <div class="tab-item">
+          <div class="tab-dot"></div>
+          <div class="tab-label"></div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-dot active"></div>
+          <div class="tab-label active"></div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-dot"></div>
+          <div class="tab-label"></div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-dot"></div>
+          <div class="tab-label"></div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-dot"></div>
+          <div class="tab-label"></div>
+        </div>
+      </div>
+    </div>
+    <div class="label">
+      <p style="font-size:8pt; color:#555; margin:0;">老师端 · 课表</p>
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <p class="slide-title">课表页面</p>
+    <p class="slide-sub">老师排课、签到的核心操作入口</p>
+
+    <div class="title-bar">
+      <p style="color:#fff; font-size:9pt; margin:0; font-weight:bold;">排课操作流程</p>
+    </div>
+    <div class="card">
+      <div class="flow-step">
+        <div class="step-num"><p style="margin:0;">1</p></div>
+        <p class="step-text">点击右上角 <b>+</b> 新增课程，选择单次课或周期课</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num"><p style="margin:0;">2</p></div>
+        <p class="step-text">选择学员、课程模板、时间；周期课额外填重复周数</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num"><p style="margin:0;">3</p></div>
+        <p class="step-text">点击课程卡片进入详情，操作 <b>签到 / 缺席 / 取消</b></p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num"><p style="margin:0;">4</p></div>
+        <p class="step-text">签到后自动扣除课时包，课时不足时推送提醒给学员</p>
+      </div>
+    </div>
+
+    <div class="title-bar" style="margin-top:4pt;">
+      <p style="color:#fff; font-size:9pt; margin:0; font-weight:bold;">课程状态说明</p>
+    </div>
+    <div class="card">
+      <p style="font-size:8pt; color:#333; margin:0;"><b style="color:#2C5F8A;">待上课</b> · <b style="color:#52C41A;">已完成</b> · <b style="color:#FAAD14;">缺席</b> · <b style="color:#FF4D4F;">已取消</b></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

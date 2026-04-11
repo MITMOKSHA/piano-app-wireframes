@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="UTF-8"><title>老师端 - 学员管理</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div>
+<div class="phone">
+  <div class="header">
+    <h1>学员</h1>
+    <div class="icon-btn">＋</div>
+  </div>
+  <div class="body">
+    <div style="background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px;border:1px solid #E8E8E8;">
+      <span style="color:#CCC;">🔍</span>
+      <span style="font-size:13px;color:#CCC;">搜索学员姓名/手机号</span>
+    </div>
+    <div class="card">
+      <div class="student-item">
+        <div class="avatar">明</div>
+        <div>
+          <div class="student-name">小明</div>
+          <div class="student-meta">钢琴基础班 · 剩余 8 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">红</div>
+        <div>
+          <div class="student-name">小红</div>
+          <div class="student-meta">考级班 · 剩余 2 课时</div>
+        </div>
+        <div class="badge badge-warn" style="margin-right:6px;">不足</div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">李</div>
+        <div>
+          <div class="student-name">小李</div>
+          <div class="student-meta">钢琴基础班 · 剩余 12 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">张</div>
+        <div>
+          <div class="student-name">小张</div>
+          <div class="student-meta">考级班 · 剩余 5 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">华</div>
+        <div>
+          <div class="student-name">小华</div>
+          <div class="student-meta">钢琴基础班 · 剩余 1 课时</div>
+        </div>
+        <div class="badge badge-warn" style="margin-right:6px;">不足</div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">芳</div>
+        <div>
+          <div class="student-name">小芳</div>
+          <div class="student-meta">考级班 · 未注册</div>
+        </div>
+        <div class="tag tag-orange" style="margin-right:6px;">待注册</div>
+        <div class="arrow">›</div>
+      </div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <div class="tab"><div class="icon"></div><div class="lbl">首页</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">课表</div></div>
+    <div class="tab"><div class="icon active"></div><div class="lbl active">学员</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">通知</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">我的</div></div>
+  </div>
+</div>
+<div class="phone-label">老师端 · 学员列表</div>
+</div>
+
+<div>
+<div class="phone">
+  <div class="header">
+    <div style="font-size:14px;color:#fff;cursor:pointer;">← 返回</div>
+    <h1>录入学员</h1>
+    <div style="width:40px;"></div>
+  </div>
+  <div class="body">
+    <div class="card">
+      <div class="form-item">
+        <div class="form-label">学员姓名 *</div>
+        <input class="form-input" placeholder="请输入学员姓名" />
+      </div>
+      <div class="form-item">
+        <div class="form-label">手机号 *</div>
+        <input class="form-input" placeholder="学员用此手机号注册登录" />
+      </div>
+      <div class="form-item">
+        <div class="form-label">课程</div>
+        <div class="form-select"><span style="color:#CCC;">请选择课程模板</span><span>▾</span></div>
+      </div>
+    </div>
+    <div style="background:#E6F4FF;border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:#1677FF;">
+      💡 录入后，告知学员用该手机号注册小程序即可自动关联
+    </div>
+    <button class="btn-primary">确认录入</button>
+  </div>
+</div>
+<div class="phone-label">老师端 · 录入学员</div>
+</div>
+</body>
+</html>
