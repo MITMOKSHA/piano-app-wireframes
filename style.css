@@ -126,6 +126,14 @@ body { font-family: Arial, sans-serif; background: #F0F2F5; min-height: 100vh; d
 .tab-dot { position: relative; }
 .tab-dot::after { content: ''; position: absolute; top: -2px; right: -2px; width: 7px; height: 7px; background: #FF4D4F; border-radius: 50%; border: 1px solid #fff; }
 
+/* Tags */
+.tag { display: inline-flex; align-items: center; font-size: 10px; font-weight: bold; padding: 2px 7px; border-radius: 10px; flex-shrink: 0; white-space: nowrap; }
+.tag-blue { background: #E6F4FF; color: #1677FF; }
+.tag-orange { background: #FFF7E6; color: #FA8C16; }
+.tag-green { background: #F6FFED; color: #52C41A; }
+.tag-red { background: #FFF1F0; color: #FF4D4F; }
+.tag-gray { background: #F0F0F0; color: #999; }
+
 /* Action item - 可点击操作项 */
 .action-item { display: flex; align-items: center; padding: 10px 0; gap: 10px; cursor: pointer; }
 .action-item:hover { background: #F8F9FA; margin: 0 -12px; padding-left: 12px; padding-right: 12px; }
