@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head><meta charset="UTF-8"><title>老师端 - 首页</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><title>老师端 - 首页</title><link rel="stylesheet" href="style.css"><style>
+.expand-btn { text-align: center; padding: 8px 0 4px; font-size: 12px; color: #2C5F8A; cursor: pointer; border-top: 1px solid #F0F0F0; }
+.expand-btn:hover { background: #F8F9FA; }
+</style></head>
 <body>
+
+<!-- Screen 1: 默认折叠态 - 只显示我的课程 -->
 <div>
 <div class="phone">
   <div class="header">
@@ -10,36 +15,35 @@
   </div>
   <div class="body">
     <div class="stat-row">
-      <div class="stat-card"><div class="stat-num">5</div><div class="stat-desc">今日课程</div></div>
-      <div class="stat-card"><div class="stat-num">23</div><div class="stat-desc">学员总数</div></div>
-      <div class="stat-card"><div class="stat-num stat-warn">3</div><div class="stat-desc">课时不足</div></div>
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-desc">今日课程</div></div>
+      <div class="stat-card"><div class="stat-num">8</div><div class="stat-desc">我的学员</div></div>
+      <div class="stat-card"><div class="stat-num stat-warn">2</div><div class="stat-desc">课时不足</div></div>
     </div>
-    <div class="card">
-      <div class="section-header">
+
+    <div class="card" style="margin-top:10px;">
+      <div class="section-header" style="margin-bottom:10px;">
         <div class="card-title">今日课程</div>
-        <div class="section-more">查看全部</div>
+        <div class="section-more">查看全部 ›</div>
       </div>
+
       <div class="lesson-item">
         <div class="dot done"></div>
-        <div><div class="lesson-name">小明 · 钢琴基础</div><div class="lesson-meta">14:00–14:45 · 王老师</div></div>
+        <div><div class="lesson-name">小明 · 钢琴基础</div><div class="lesson-meta">14:00–14:45</div></div>
         <div class="badge badge-done">已完成</div>
       </div>
       <div class="lesson-item">
         <div class="dot"></div>
-        <div><div class="lesson-name">小红 · 考级班</div><div class="lesson-meta">15:00–15:45 · 王老师</div></div>
+        <div><div class="lesson-name">小红 · 考级班</div><div class="lesson-meta">15:00–15:45</div></div>
         <div class="badge badge-warn">课时不足</div>
       </div>
       <div class="lesson-item">
         <div class="dot"></div>
-        <div><div class="lesson-name">小李 · 钢琴基础</div><div class="lesson-meta">18:00–18:45 · 李老师</div></div>
+        <div><div class="lesson-name">小李 · 钢琴基础</div><div class="lesson-meta">16:00–16:45</div></div>
         <div class="badge badge-scheduled">待上课</div>
       </div>
-      <div class="lesson-item">
-        <div class="dot"></div>
-        <div><div class="lesson-name">小张 · 考级班</div><div class="lesson-meta">19:00–19:45 · 李老师</div></div>
-        <div class="badge badge-scheduled">待上课</div>
-      </div>
+      <div class="expand-btn">展开更多（共4节）▼</div>
     </div>
+
     <div class="card">
       <div class="card-title">课时不足提醒</div>
       <div class="lesson-item">
@@ -67,7 +71,80 @@
     <div class="tab"><div class="icon"></div><div class="lbl">我的</div></div>
   </div>
 </div>
-<div class="phone-label">老师端 · 首页</div>
+<div class="phone-label">老师端 · 首页（只显示我的课程）</div>
+</div>
+
+<!-- Screen 2: 展开态 - 显示全部我的课程 -->
+<div>
+<div class="phone">
+  <div class="header">
+    <div><h1>首页</h1><div class="sub">星光钢琴机构</div></div>
+    <div class="icon-btn">🔔</div>
+  </div>
+  <div class="body">
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-desc">今日课程</div></div>
+      <div class="stat-card"><div class="stat-num">8</div><div class="stat-desc">我的学员</div></div>
+      <div class="stat-card"><div class="stat-num stat-warn">2</div><div class="stat-desc">课时不足</div></div>
+    </div>
+
+    <div class="card" style="margin-top:10px;">
+      <div class="section-header" style="margin-bottom:10px;">
+        <div class="card-title">今日课程</div>
+        <div class="section-more">查看全部 ›</div>
+      </div>
+
+      <div class="lesson-item">
+        <div class="dot done"></div>
+        <div><div class="lesson-name">小明 · 钢琴基础</div><div class="lesson-meta">14:00–14:45</div></div>
+        <div class="badge badge-done">已完成</div>
+      </div>
+      <div class="lesson-item">
+        <div class="dot"></div>
+        <div><div class="lesson-name">小红 · 考级班</div><div class="lesson-meta">15:00–15:45</div></div>
+        <div class="badge badge-warn">课时不足</div>
+      </div>
+      <div class="lesson-item">
+        <div class="dot"></div>
+        <div><div class="lesson-name">小李 · 钢琴基础</div><div class="lesson-meta">16:00–16:45</div></div>
+        <div class="badge badge-scheduled">待上课</div>
+      </div>
+      <div class="lesson-item">
+        <div class="dot"></div>
+        <div><div class="lesson-name">小丽 · 考级班</div><div class="lesson-meta">17:00–17:45</div></div>
+        <div class="badge badge-scheduled">待上课</div>
+      </div>
+      <div class="expand-btn">收起 ▲</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">课时不足提醒</div>
+      <div class="lesson-item">
+        <div class="avatar">红</div>
+        <div><div class="lesson-name">小红</div><div class="lesson-meta">剩余 2 课时</div></div>
+        <div class="badge badge-warn">需续费</div>
+      </div>
+      <div class="lesson-item">
+        <div class="avatar">华</div>
+        <div><div class="lesson-name">小华</div><div class="lesson-meta">剩余 1 课时</div></div>
+        <div class="badge badge-warn">需续费</div>
+      </div>
+      <div class="lesson-item">
+        <div class="avatar">芳</div>
+        <div><div class="lesson-name">小芳</div><div class="lesson-meta">剩余 3 课时</div></div>
+        <div class="badge badge-warn">需续费</div>
+      </div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <div class="tab"><div class="icon active"></div><div class="lbl active">首页</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">课表</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">学员</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">通知</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">我的</div></div>
+  </div>
+</div>
+<div class="phone-label">老师端 · 首页（展开我的全部课程）</div>
 </div>
 </body>
 </html>

@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head><meta charset="UTF-8"><title>老师端 - 学员管理</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><title>老师端 - 学员管理</title><link rel="stylesheet" href="style.css"><style>
+.expand-btn { text-align: center; padding: 8px 0 4px; font-size: 12px; color: #2C5F8A; cursor: pointer; border-top: 1px solid #F0F0F0; }
+.expand-btn:hover { background: #F8F9FA; }
+.student-item { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #F0F0F0; gap: 10px; cursor: pointer; }
+.student-item:last-child { border-bottom: none; }
+.student-item > div:nth-child(2) { flex: 1; min-width: 0; }
+.student-item .badge, .student-item .tag { margin-right: 4px; }
+.student-item .arrow { margin-left: 0; color: #CCC; font-size: 14px; }
+</style></head>
 <body>
+
+<!-- Screen 1: 普通老师端 - 学员列表（保持原始版本） -->
 <div>
 <div class="phone">
   <div class="header">
@@ -78,6 +88,121 @@
 <div class="phone-label">老师端 · 学员列表</div>
 </div>
 
+<!-- Screen 2: 管理员端 - 按老师分组显示所有学员 -->
+<div>
+<div class="phone">
+  <div class="header">
+    <h1>学员</h1>
+    <div class="icon-btn">＋</div>
+  </div>
+  <div class="body">
+    <div style="background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px;border:1px solid #E8E8E8;">
+      <span style="color:#CCC;">🔍</span>
+      <span style="font-size:13px;color:#CCC;">搜索学员姓名/手机号</span>
+    </div>
+
+    <!-- Section: 王老师（我） -->
+    <div class="section-header" style="margin-top:4px;">
+      <div class="section-title">王老师（我） <span style="font-size:11px;color:#888;font-weight:normal;">5人</span></div>
+    </div>
+    <div class="card">
+      <div class="student-item">
+        <div class="avatar">明</div>
+        <div>
+          <div class="student-name">小明</div>
+          <div class="student-meta">钢琴基础班 · 剩余 8 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">红</div>
+        <div>
+          <div class="student-name">小红</div>
+          <div class="student-meta">考级班 · 剩余 2 课时</div>
+        </div>
+        <div class="badge badge-warn">不足</div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar">李</div>
+        <div>
+          <div class="student-name">小李</div>
+          <div class="student-meta">钢琴基础班 · 剩余 12 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="expand-btn">展开更多（共5人）▼</div>
+    </div>
+
+    <!-- Section: 李老师 -->
+    <div class="section-header" style="margin-top:8px;">
+      <div class="section-title">李老师 <span style="font-size:11px;color:#888;font-weight:normal;">6人</span></div>
+    </div>
+    <div class="card">
+      <div class="student-item">
+        <div class="avatar" style="background:#E6F4FF;">张</div>
+        <div>
+          <div class="student-name">小张</div>
+          <div class="student-meta">考级班 · 剩余 5 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar" style="background:#E6F4FF;">华</div>
+        <div>
+          <div class="student-name">小华</div>
+          <div class="student-meta">钢琴基础班 · 剩余 1 课时</div>
+        </div>
+        <div class="badge badge-warn">不足</div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar" style="background:#FFF7E6;">芳</div>
+        <div>
+          <div class="student-name">小芳</div>
+          <div class="student-meta">考级班 · 未注册</div>
+        </div>
+        <div class="tag tag-orange">待注册</div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="expand-btn">展开更多（共6人）▼</div>
+    </div>
+
+    <!-- Section: 赵老师 -->
+    <div class="section-header" style="margin-top:8px;">
+      <div class="section-title">赵老师 <span style="font-size:11px;color:#888;font-weight:normal;">2人</span></div>
+    </div>
+    <div class="card">
+      <div class="student-item">
+        <div class="avatar" style="background:#F6FFED;">刚</div>
+        <div>
+          <div class="student-name">小刚</div>
+          <div class="student-meta">乐理课 · 剩余 10 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+      <div class="student-item">
+        <div class="avatar" style="background:#F6FFED;">美</div>
+        <div>
+          <div class="student-name">小美</div>
+          <div class="student-meta">乐理课 · 剩余 4 课时</div>
+        </div>
+        <div class="arrow">›</div>
+      </div>
+    </div>
+  </div>
+  <div class="tabbar">
+    <div class="tab"><div class="icon"></div><div class="lbl">首页</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">课表</div></div>
+    <div class="tab"><div class="icon active"></div><div class="lbl active">学员</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">通知</div></div>
+    <div class="tab"><div class="icon"></div><div class="lbl">我的</div></div>
+  </div>
+</div>
+<div class="phone-label">学员列表 · 管理员端（按老师分组，显示全部学员）</div>
+</div>
+
+<!-- Screen 3: 普通老师端 - 录入学员 -->
 <div>
 <div class="phone">
   <div class="header">
@@ -104,5 +229,41 @@
 </div>
 <div class="phone-label">老师端 · 录入学员</div>
 </div>
+
+<!-- Screen 4: 管理员端 - 录入学员（可选择老师） -->
+<div>
+<div class="phone">
+  <div class="header">
+    <div style="font-size:14px;color:#fff;cursor:pointer;">← 返回</div>
+    <h1>录入学员</h1>
+    <div style="width:40px;"></div>
+  </div>
+  <div class="body">
+    <div class="card">
+      <div class="form-item">
+        <div class="form-label">所属老师 *</div>
+        <div class="form-select">
+          <span>王老师（我）</span>
+          <span style="color:#CCC;">▼</span>
+        </div>
+      </div>
+      <div class="form-item">
+        <div class="form-label">学员姓名 *</div>
+        <input class="form-input" placeholder="请输入学员姓名" />
+      </div>
+      <div class="form-item">
+        <div class="form-label">手机号 *</div>
+        <input class="form-input" placeholder="学员用此手机号注册登录" />
+      </div>
+    </div>
+    <div style="background:#E6F4FF;border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:#1677FF;">
+      💡 录入后，告知学员用该手机号注册小程序即可自动关联
+    </div>
+    <button class="btn-primary">确认录入</button>
+  </div>
+</div>
+<div class="phone-label">录入学员 · 管理员端（可选老师）</div>
+</div>
+
 </body>
 </html>
